@@ -1,0 +1,2 @@
+Schreiben Sie ein Shell-Script mit dem Namen myquestion. Dieses Script hat als Parameter den Text einer Frage, die mit Ja oder Nein beantwortet werden kann. 
+Antwortet der Benutzer mit Ja, so liefert das Script den Rückgabewert 0, bei Nein wird 1 geliefert, andernfalls erscheint die Frage noch einmal.
