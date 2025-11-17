@@ -1,0 +1,2 @@
+Schreiben Sie ein Shell-Script, das die ersten n Files eines Ordners löscht. 
+Das Verzeichnis und die Anzahl der zu löschenden Dateien sollen als Parameter beim Aufrufen angegeben werden.
