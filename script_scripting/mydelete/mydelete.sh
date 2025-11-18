@@ -6,7 +6,7 @@ if [ $# -eq 0 ]; then
   exit 2
 fi
 
-for file in "%@"; do
+for file in "$@"; do
   if [ -f "$file" ]; then
 
     read -p "soll [$file] gelöscht werden? (Ja|Nein): " antwort
