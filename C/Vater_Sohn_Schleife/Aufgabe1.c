@@ -17,17 +17,17 @@ int main() {
         printf("Das sind die ungeraden Zahlen vom Kindprozess (PID %d): %d\n", getpid(), i);
       }
     }
+    exit(0);
   }
 
   else {
-    
-    wait(NULL);
 
     for (int i = 1; i <= 2000; i++) {
       if (i % 2 == 0) {
         printf("Das sind die geraden Zahlen vom Vaterprozess (PID %d): %d\n", getpid(), i);
       }
     }
+    wait(NULL);
   }
   return 0;
 }
