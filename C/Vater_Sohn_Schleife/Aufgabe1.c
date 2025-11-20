@@ -2,12 +2,13 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <stdlib.h>
 
 int main() {
   pid_t pid = fork();
 
   if (pid < 0) {
-    perror("\nFord war nicht erfolgreich.");
+    perror("\nFork war nicht erfolgreich.");
     return 0;
   }
 
