@@ -11,7 +11,7 @@ frage="$*"
 while true; do
   read -p "$frage (Ja|Nein): " antwort
 
-  antwort=$(echo "$antwort" | tr '[:upper:]' '[:lower:];)
+  antwort=$(echo "$antwort" | tr '[:upper:]' '[:lower:]')
 
   case "$antwort" in
     ja|j)
