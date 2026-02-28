@@ -9,25 +9,13 @@ fi
 for file in "$@"; do
   if [ -f "$file" ]; then
 
-    read -p "soll [$file] gelöscht werden? (Ja|Nein): " antwort
+    if ./myquestion.sh "delete $file? "; then
+      rm $file
+      echo "file was deleted."
+    else 
+      echo "$file was not deleted.@
 
-    antwort=$(echo "$antwort" | tr '[:upper:]' '[:lower:]')
-
-    case "$antwort" in
-      ja|j)
-          rm $file
-          echo "[$file] wurde erfolgreich gelöscht."
-          ;;
-
-      nein|n)
-          echo "[$file] wurde nicht gelöscht."
-          ;;
-
-      *)
-        echo "Bitte mit 'Ja' oder 'Nein' antworten."
-        ;;
-
-    esac
+    fi
 
   else
     echo "[$file] exisitiert nicht!"
